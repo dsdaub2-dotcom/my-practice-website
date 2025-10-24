@@ -1,18 +1,5 @@
 # Netlify configuration for static HTML site
-# No build process needed!
 
 [build]
-  # We don't need to build anything - it's already HTML/CSS
-  command = "echo 'No build needed!'"
-  
-  # The folder containing your website files
+  # No build command needed - this is static HTML
   publish = "."
-
-# Optional: Set up redirects or custom headers
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  
-  # This makes sure your single-page routing works
-  # (Not needed if you don't have client-side routing)
