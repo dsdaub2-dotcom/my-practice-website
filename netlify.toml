@@ -1,5 +1,2 @@
-# Netlify configuration for static HTML site
-
 [build]
-  # No build command needed - this is static HTML
   publish = "."
