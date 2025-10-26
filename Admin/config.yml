@@ -1,0 +1,66 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "content/homepage.md"
+        fields:
+          - {label: "Practice Name", name: "practice_name", widget: "string"}
+          - {label: "Tagline", name: "tagline", widget: "string"}
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Address", name: "address", widget: "text"}
+          - {label: "Hours", name: "hours", widget: "string"}
+          - {label: "Hero Headline", name: "hero_headline", widget: "string"}
+          - {label: "Hero Subheadline", name: "hero_subheadline", widget: "text"}
+          - {label: "CTA Button 1 Text", name: "cta1_text", widget: "string"}
+          - {label: "CTA Button 2 Text", name: "cta2_text", widget: "string"}
+      
+      - label: "Contact Page"
+        name: "contact"
+        file: "content/contact.md"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Address", name: "address", widget: "text"}
+          - {label: "Office Hours", name: "hours", widget: "text"}
+          - {label: "Map URL", name: "map_url", widget: "string"}
+  
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Service Name", name: "title", widget: "string"}
+      - {label: "Short Description", name: "description", widget: "text"}
+      - {label: "Full Content", name: "body", widget: "markdown"}
+      - {label: "Icon", name: "icon", widget: "image", required: false}
+  
+  - name: "specialists"
+    label: "Specialists"
+    folder: "content/specialists"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Credentials", name: "credentials", widget: "string"}
+      - {label: "Photo", name: "photo", widget: "image"}
+      - {label: "Short Bio", name: "bio_short", widget: "text"}
+      - {label: "Full Bio", name: "body", widget: "markdown"}
+      - {label: "Specialties", name: "specialties", widget: "list"}
+      - {label: "Education", name: "education", widget: "list"}
+      - {label: "Insurance Accepted", name: "insurance", widget: "list"}
+      - {label: "Accepting New Patients", name: "accepting", widget: "boolean", default: true}
+      - {label: "Phone", name: "phone", widget: "string", required: false}
+      - {label: "Email", name: "email", widget: "string", required: false}
